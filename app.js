@@ -29,12 +29,10 @@ app.use(
 
 app.use(bodyParser.json());
 
-// Health check route
 app.get("/health", (req, res) => {
   res.json({ status: "ok" });
 });
 
-// POST /generate endpoint
 app.post("/api/generate", async (req, res) => {
   const { message } = req.body;
   
